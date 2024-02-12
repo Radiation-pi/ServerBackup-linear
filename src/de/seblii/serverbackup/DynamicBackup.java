@@ -30,11 +30,11 @@ public class DynamicBackup implements Listener {
 					@Override
 					public void run() {
 						String chunkInf = "Data." + e.getTo().getWorld().getName() + ".Chunk." + "r." + regX + "."
-								+ regZ + ".mca";
+								+ regZ + ".linear";
 
 						if (!Bukkit.getWorldContainer().toString().equalsIgnoreCase(".")) {
 							chunkInf = "Data." + Bukkit.getWorldContainer() + "\\" + e.getTo().getWorld().getName()
-									+ ".Chunk." + "r." + regX + "." + regZ + ".mca";
+									+ ".Chunk." + "r." + regX + "." + regZ + ".linear";
 						}
 
 						if (!chunks.contains(e.getTo().getChunk())) {
@@ -99,11 +99,11 @@ public class DynamicBackup implements Listener {
 				@Override
 				public void run() {
 					String chunkInf = "Data." + p.getLocation().getWorld().getName() + ".Chunk." + "r." + regX + "."
-							+ regZ + ".mca";
+							+ regZ + ".linear";
 
 					if (!Bukkit.getWorldContainer().toString().equalsIgnoreCase(".")) {
 						chunkInf = "Data." + Bukkit.getWorldContainer() + "\\" + p.getLocation().getWorld().getName()
-								+ ".Chunk." + "r." + regX + "." + regZ + ".mca";
+								+ ".Chunk." + "r." + regX + "." + regZ + ".linear";
 					}
 
 					if (!chunks.contains(p.getLocation().getChunk())) {
